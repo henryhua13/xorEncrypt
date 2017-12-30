@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		XOR Encrypt/Decrypt 
+	</title>
+</head>
+<body>
+	<div style="display: flex;">
+		<div style="margin: 5px;">
+			<h2>input</h2>
+			<textarea id="input" rows="30" cols="50"></textarea>
+		</div>
+		<div style="margin: 5px;">
+			<label>Key</label>
+			<input id="key" type="text" name="Key">
+			<button onclick="encryptdecrypt()">Encrypt/Decrypt</button>
+		</div>
+		<div style="margin: 5px;">
+			<h2>output</h2>
+			<textarea id="output" rows="30" cols="50"></textarea>
+			<script>
+				function encryptdecrypt() {	
+					var input = document.getElementById("input").value;
+					var key = document.getElementById("key").value;
+					var output = "";
+					for (var i = 0; i < input.length; i++) {
+						output += String.fromCharCode(input[i].charCodeAt() ^ key);
+					}					
+					document.getElementById("output").value = output;
+				}
+			</script>
+		</div>
+	</div>
+</body>
+</html>
