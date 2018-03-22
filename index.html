@@ -6,19 +6,21 @@
 	</title>
 </head>
 <body>
-	<div style="display: flex;">
+	<h1>XOR Encrypter/Decrypter</h1>
+	<p>Encrypts or decrypts the input by comparing each character with the key through an XOR operation</p>
+	<div>
 		<div style="margin: 5px;">
 			<h2>input</h2>
-			<textarea id="input" rows="30" cols="50"></textarea>
+			<textarea id="input" rows="20" cols="100" style="resize: none; width: 100%;"></textarea>
 		</div>
 		<div style="margin: 5px;">
-			<label>Key</label>
+			<label>Key:</label>
 			<input id="key" type="text" name="Key">
-			<button onclick="encryptdecrypt()">Encrypt/Decrypt</button>
+			<button onclick="encryptdecrypt()">Encrypt / Decrypt</button>
 		</div>
 		<div style="margin: 5px;">
 			<h2>output</h2>
-			<textarea id="output" rows="30" cols="50"></textarea>
+			<textarea id="output" rows="20" cols="100" style="resize: none; width: 100%;"></textarea>
 			<script>
 				function encryptdecrypt() {	
 					var input = document.getElementById("input").value;
